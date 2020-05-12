@@ -4,16 +4,19 @@
     </div>
 </template>
 <script>
+import storage from './storage/index'
 export default {
   name: 'App',
   components: {
-
   },
-  data(){
-
-  },
+  // data(){
+  //
+  // },
   mounted(){
-
+    storage.setItem("a",1);
+    storage.setItem("user", { 'a':1 });
+    storage.setItem("abc",1,"user");
+    storage.clear('a');
   }
 }
 </script>
